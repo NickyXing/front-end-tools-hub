@@ -272,6 +272,16 @@ const prevFrame = () => {
     color: #888;
     font-style: italic;
   }
+  animation: textslidein 1s ease-in-out 1 alternate;
+}
+
+@keyframes textslidein {
+  0% {
+    right: -600px;
+  }
+  100% {
+    right: 20px;
+  }
 }
 
 .billabong {
