@@ -129,6 +129,7 @@ const prevFrame = () => {
             </div>
             <div class="describe">Welcome to my SPACE</div>
           </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,229.3C384,235,480,277,576,277.3C672,277,768,235,864,213.3C960,192,1056,192,1152,181.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
         </div>
       </el-carousel-item>
       <el-carousel-item>
@@ -144,6 +145,7 @@ const prevFrame = () => {
         </div>
       </el-carousel-item>
     </el-carousel>
+    
   </div>
 </template>
 <style scoped lang="scss">
