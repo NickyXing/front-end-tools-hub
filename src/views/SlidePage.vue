@@ -15,7 +15,7 @@ onMounted(() => {
       <div class="subtitle">——ikun</div>
     </div>
     <div class="second-in fade-in" v-show="show">
-      <pre>
+      <pre v-if="false">
             鸡你太美
               鸡太美
                  只因
@@ -38,15 +38,36 @@ onMounted(() => {
           皮鞋            皮鞋
         </pre
       >
+      <div class="ikun">
+        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
+        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
+        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
+        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
+        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
+        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
+        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
+        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
+        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
+        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
+        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
+        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
+        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
+        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
+        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
+        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
+        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
+        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
+        ikun ikun ikun ikun
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .page {
-    width: 100%;
+  width: 100%;
   height: 100%;
-  background: #25292b;
+  background: #000;
 }
 .first-in {
   width: 100%;
@@ -64,17 +85,20 @@ onMounted(() => {
 @keyframes fade {
   0% {
     opacity: 0;
+    font-size: 20px;
   }
   50% {
     opacity: 1;
+    font-size: 20px;
   }
   100% {
     opacity: 0;
+    font-size: 16px;
   }
 }
 
 .fade-in {
-    animation: fadeIn 5s ease-in-out forwards;
+  animation: fadeIn 5s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
@@ -86,7 +110,7 @@ onMounted(() => {
   }
 }
 .title {
-  width: 350px;
+  width: 850px;
 }
 .subtitle {
   width: 350px;
@@ -101,5 +125,20 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.ikun {
+  width: 400px;
+  height: 400px;
+  background: url(@/assets/imgs/ikun.gif) center/cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  mix-blend-mode: difference;
+  filter: grayscale(1) invert(100%) contrast(3);
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none;
 }
 </style>
