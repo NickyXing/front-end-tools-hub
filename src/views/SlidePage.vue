@@ -18,7 +18,7 @@ onMounted(() => {
       <div class="title">“黄昏见证虔诚的信徒,巅峰诞生虚伪的拥护”</div>
       <div class="subtitle">——ikun</div>
     </div>
-    <div class="second-in fade-in-out" v-show="show">
+    <div class="second-in fade-in" v-show="show">
       <pre v-if="false">
             鸡你太美
               鸡太美
@@ -118,8 +118,8 @@ onMounted(() => {
 }
 
 .ikun {
-//   width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
   background: url(@/assets/imgs/kun.png) center/cover;
   background-clip: text;
   -webkit-background-clip: text;
