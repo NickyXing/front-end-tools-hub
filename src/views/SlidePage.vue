@@ -1,7 +1,11 @@
 <script setup>
 import { onMounted, ref } from "vue";
 const show = ref(false);
+const text = ref('')
 onMounted(() => {
+    for (let i = 0; i < 300; i++) {
+        text.value += 'ikun amagi '
+    }
   setTimeout(() => {
     show.value = true;
   }, 5000);
@@ -14,7 +18,7 @@ onMounted(() => {
       <div class="title">“黄昏见证虔诚的信徒,巅峰诞生虚伪的拥护”</div>
       <div class="subtitle">——ikun</div>
     </div>
-    <div class="second-in fade-in" v-show="show">
+    <div class="second-in fade-in-out" v-show="show">
       <pre v-if="false">
             鸡你太美
               鸡太美
@@ -39,25 +43,7 @@ onMounted(() => {
         </pre
       >
       <div class="ikun">
-        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
-        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
-        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
-        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
-        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
-        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
-        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
-        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
-        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
-        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
-        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
-        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
-        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
-        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
-        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
-        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
-        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
-        ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun ikun
-        ikun ikun ikun ikun
+        {{text}}
       </div>
     </div>
   </div>
@@ -85,15 +71,15 @@ onMounted(() => {
 @keyframes fade {
   0% {
     opacity: 0;
-    font-size: 20px;
+    font-size: 16px;
   }
   50% {
     opacity: 1;
-    font-size: 20px;
+    font-size: 16px;
   }
   100% {
     opacity: 0;
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
@@ -110,11 +96,15 @@ onMounted(() => {
   }
 }
 .title {
-  width: 850px;
+  width: 100%;
+  text-align: center;
 }
 .subtitle {
-  width: 350px;
+  width: 80%;
   text-align: right;
+  font-size: 12px;
+  margin-top: 10px;
+//   padding-right: 30px;
 }
 
 .second-in {
@@ -128,17 +118,20 @@ onMounted(() => {
 }
 
 .ikun {
-  width: 400px;
+//   width: 400px;
   height: 400px;
-  background: url(@/assets/imgs/ikun.gif) center/cover;
+  background: url(@/assets/imgs/kun.png) center/cover;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  font-size: 12px;
+  font-style: italic;
   mix-blend-mode: difference;
   filter: grayscale(1) invert(100%) contrast(3);
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none;
+  overflow: hidden;
 }
 </style>
